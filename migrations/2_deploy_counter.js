@@ -5,9 +5,10 @@ const Counter = artifacts.require("Counter");
 module.exports = function (deployer) {
   deployer
     .deploy(Counter)
-    .then(() => {
+    .then(async () => {
       const counterAddress = JSON.stringify({ address: Counter.address });
-      fs.writeFile(path.resolve(__dirname, '..', 'build', 'CounterAddress.json'), counterAddress, err => {
+      const testNetName = await web3.eth.net.getNetworkType();
+      fs.writeFile(path.resolve(__dirname, '..', 'build', `${testNetName}_CounterAddress.json`), counterAddress, err => {
         if (err) {
           console.error(err)
           return
