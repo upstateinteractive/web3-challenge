@@ -1,5 +1,5 @@
 # web3 challenge
-Build a basic front-end that connects to the Ethereum blockchain with a [MetaMask](https://metamask.io/) wallet.
+Build a basic front-end that connects to the Ethereum blockchain with a [MetaMask](https://metamask.io/) wallet, and makes function calls to a smart contract. The app should display your ETH address and balance, along with a button to increment, decrement, and get the count. 
 
 You may use React or Angular for the front-end.
 The smart contract code and the ABI are complete and provided in this repository.
